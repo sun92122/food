@@ -1,89 +1,93 @@
 <!DOCTYPE html>
 <html>
+<link href="css/button_style.css">
 
-    <head>
-        <title>Help decide your lunch.</title>
-    </head>
+<head>
+    <title>Help decide your lunch.</title>
+</head>
 
-    <body style="text-align: center">
-        <h1 style="color: green">Help you decide your lunch!</h1>
+<body style="text-align: center">
+    <h1 style="color: green">Help you decide your lunch!</h1>
 
-        <button id="button" class="button pulse" onclick="rd()">click here</button>
+    <button id="button" class="button pulse" onclick="rd()">click here</button>
 
-        <p id="GFG_DOWN" style="font-size: 24px; font-weight: bold; color: green"></p>
+    <p id="GFG_DOWN" style="font-size: 24px; font-weight: bold; color: green"></p>
 
-        <script>
-            var up = document.getElementById("GFG_UP");
-            var down = document.getElementById("GFG_DOWN");
+    <script>
+        var up = document.getElementById("GFG_UP");
+        var down = document.getElementById("GFG_DOWN");
 
-            var arr = ["GFG_1", "GeeksForGeeks", "Geeks", "Computer Science Portal"];
+        var arr = ["GFG_1", "GeeksForGeeks", "Geeks", "Computer Science Portal"];
 
-            function rd() {
-                var di = {
-                    '鍋in': 1,
-                    '三媽': 2,
-                    '小飯館兒': 1,
-                    '浩哥': 2,
-                    '麥味登': 1,
-                    '麥當勞': 1,
-                    '鐵板燒': 1,
-                    '水源咖哩': 3,
-                    '咖哩媽媽': 1,
-                    '水源炒泡麵': 1,
-                    '鱷吐司': 2,
-                    '吐司吐司': 2,
-                    '晚上五點半後的日式料理': 1,
-                    '十二巷拉麵': 1,
-                    '我家涼麵': 1,
-                    '牛洞': 1,
-                    '水源韓式便當': 1,
-                    '冰天地': 0,
-                    '甜不辣': 1,
-                    '裝到滿便當': 5,
-                    '維綸': 1,
-                    '沙拉飯': 1,
-                    '關東煮炒泡麵': 2
-                };
-                var prs = [];
-                Object.values(di).reduce((a, b, i) => prs[i] = a + b, 0);
+        function rd() {
+            var di = {
+                '鍋in': 1,
+                '三媽': 2,
+                '小飯館兒': 1,
+                '浩哥': 2,
+                '麥味登': 1,
+                '麥當勞': 1,
+                '鐵板燒': 1,
+                '水源咖哩': 3,
+                '咖哩媽媽': 1,
+                '水源炒泡麵': 1,
+                '鱷吐司': 2,
+                '吐司吐司': 2,
+                '晚上五點半後的日式料理': 1,
+                '十二巷拉麵': 1,
+                '我家涼麵': 1,
+                '牛洞': 1,
+                '水源韓式便當': 1,
+                '冰天地': 0,
+                '甜不辣': 1,
+                '裝到滿便當': 5,
+                '維綸': 1,
+                '沙拉飯': 1,
+                '關東煮炒泡麵': 2
+            };
+            var prs = [];
+            Object.values(di).reduce((a, b, i) => prs[i] = a + b, 0);
 
-                var wsum = prs[prs.length - 1];
-                var rdn = Math.ceil(Math.random() * wsum) - 1;
-                down.innerHTML = Object.keys(di)[prs.findIndex(index => index > rdn)];
+            var wsum = prs[prs.length - 1];
+            var rdn = Math.ceil(Math.random() * wsum) - 1;
+            down.innerHTML = Object.keys(di)[prs.findIndex(index => index > rdn)];
 
+        }
+    </script>
+
+    <style>
+        .pulse:hover,
+        .pulse:focus {
+            animation: pulse 1s;
+            box-shadow: 0 0 0 2em transparent;
+            color: lightgreen
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 var(--hover);
             }
-        </script>
-
-        <style>
-            .pulse:hover, 
-            .pulse:focus {
-                animation: pulse 1s;
-                box-shadow: 0 0 0 2em transparent;
-                color: lightgreen
-            }
-
-            @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 var(--hover); }
-            }
-
-            @each $button, $color in $colors {
+        }
+        
+        @each $button,
+        $color in $colors {
             .#{$button} {
                 --color: #{$color};
                 --hover: #{adjust-hue($color, 45deg)};
             }
-            }
+        }
+        
+        button {
+            background: none;
+            border: 2px solid;
+            font: inherit;
+            line-height: 1;
+            margin: 0.5em;
+            padding: 1em 2em;
+            outline: none
+        }
+    </style>
 
-            button {
-                background: none;
-                border: 2px solid;
-                font: inherit;
-                line-height: 1;
-                margin: 0.5em;
-                padding: 1em 2em;
-                outline: none
-            }
-        </style>
-
-    </body>
+</body>
 
 </html>
