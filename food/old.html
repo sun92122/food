@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>
+		Help decide your lunch.
+	</title>
+</head>
+
+<body style = "text-align:center;">
+	
+	<h1 style = "color:green;">
+		Help you decide your lunch!
+	</h1>
+	
+	<button id = "button" onclick = "weightedRandom()">
+		click here
+	</button>
+	
+	<p id = "GFG_DOWN" style =
+		"font-size: 24px; font-weight: bold; color: green;">
+	</p>
+	
+	<script>
+		var up = document.getElementById('GFG_UP');
+		var down = document.getElementById('GFG_DOWN');
+		
+		var arr = ["GFG_1", "GeeksForGeeks",
+				"Geeks", "Computer Science Portal"];
+
+    function weightedRandom()
+    {
+        var items=[
+        '鍋in',
+        '三媽',
+        '小飯館兒',
+        '皓哥',
+        '麥味登',
+        '麥當勞',
+        '鐵板燒',
+        '水源咖哩',
+        '咖哩媽媽',
+        '水源炒泡麵',
+        '鱷吐司',
+        '吐司吐司',
+        '晚上五點半後的日式料理',
+        '十二巷拉麵',
+        '我家涼麵',
+        '牛洞',
+        '水源韓式便當',
+        '冰天地',
+        '甜不辣',
+        '還債便當',
+        '維綸',
+        '沙拉飯',
+        '關東煮炒泡麵'
+        ];
+        var itemsWeight=[
+        3.03030303,
+        6.060606061,
+        3.03030303,
+        6.060606061,
+        3.03030303,
+        3.03030303,
+        3.03030303,
+        9.090909091,
+        3.03030303,
+        6.060606061,
+        6.060606061,
+        3.03030303,
+        3.03030303,
+        3.03030303,
+        3.03030303,
+        3.03030303,
+        0,
+        3.03030303,
+        15.15151515,
+        3.03030303,
+        6.060606061,
+        6.060606061
+        ];
+        var totalWeight=100;
+        var randomArray=[];
+        for(var i=0; i<items.length; i++)
+        {
+            for(var j=0; j<itemsWeight[i]; j++)
+            {
+                randomArray.push(i);
+            }
+        }
+        var randomNumber=Math.floor(Math.random()*totalWeight);
+        down.innerHTML = items[randomArray[randomNumber]];
+    }
+	</script>
+</body>
+
+</html>
