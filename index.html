@@ -9,7 +9,7 @@
 <body style="text-align: center">
     <h1 style="color: green">Help you decide your lunch!</h1>
 
-    <button id="button" class="button pulse" onclick="rd()">click here</button>
+    <button class="button pulse" onclick="rd()">click here</button>
 
     <p id="GFG_DOWN" style="font-size: 24px; font-weight: bold; color: green"></p>
 
@@ -56,35 +56,29 @@
     </script>
 
     <style>
-        .pulse:hover,
-        .pulse:focus {
-            animation: pulse 1s;
-            box-shadow: 0 0 0 2em transparent;
-            color: lightgreen
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
         }
         
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 var(--hover);
-            }
+        .button:hover {
+            background-color: #3e8e41
         }
         
-        @each $button,
-        $color in $colors {
-            .#{$button} {
-                --color: #{$color};
-                --hover: #{adjust-hue($color, 45deg)};
-            }
-        }
-        
-        button {
-            background: none;
-            border: 2px solid;
-            font: inherit;
-            line-height: 1;
-            margin: 0.5em;
-            padding: 1em 2em;
-            outline: none
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
         }
     </style>
 
