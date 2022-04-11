@@ -1,11 +1,11 @@
-import dict from "list.js"
+import {dict} from "./list.js"
 
-function rand() {
+rand = function() {
     var weight_prefix_sum = [];
     Object.values(dict).reduce((a, b, i) => weight_prefix_sum[i] = a + b, 0);
 
-    var total_weight = weight_prefix_sum[weight_prefix_sum.length - 1]
+    var total_weight = weight_prefix_sum[weight_prefix_sum.length - 1];
 
-    var randomNumber = Math.ceil(Math.random() * total_weight) - 1
-    down.innerHTML = Object.keys(dict)[weight_prefix_sum.findIndex(index => index > randomNumber)];
+    var randomNumber = Math.ceil(Math.random() * total_weight) - 1;
+    document.getElementById("return").innerHTML = Object.keys(dict)[weight_prefix_sum.findIndex(index => index > randomNumber)];
 }

@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
 
-<link rel="stylesheet" type="text/css" href="css/button_style.min.css">
 
 <head>
     <title>Help decide your lunch.</title>
 </head>
 
 <body style="text-align: center">
+    <link rel="stylesheet" type="text/css" href="./css/min/button_style.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script type="module" src="../js/min/rand.min.js"></script>
+    <script type="text/javascript">var rand = rand</script>
+
     <h1 style="color: green">Help you decide your lunch!</h1>
 
-    <button class="button pulse" onclick="rand()">click here</button>
+    <button class="button" onclick="rand();">click here</button>
 
-    <p id="GFG_DOWN" style="font-size: 24px; font-weight: bold; color: green"></p>
+    <p id="return"></p>
 
-    <script src="js/rand.min.js"></script>
-    <script>
-        var up = document.getElementById("GFG_UP");
-        var down = document.getElementById("GFG_DOWN");
-
-        var arr = ["GFG_1", "GeeksForGeeks", "Geeks", "Computer Science Portal"];
-    </script>
 
 </body>
 

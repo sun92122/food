@@ -1,9 +1,12 @@
 # food  
   
-### js and css
-
+### js and css  
+  
 please compress but keep the original.  
-use https://refresh-sf.com/ or other.  
+use  
+https://refresh-sf.com/  
+https://www.toptal.com/developers/javascript-minifier/  
+or other.  
 
 ### for phone or pad
 

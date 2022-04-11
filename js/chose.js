@@ -1,5 +1,5 @@
-import { dict, key } from './list.js';
-import './jquery/jquery-2.2.4.js';
+import { dict, key } from "./list.js";
+import "./jquery/jquery-2.2.4.min.js";
 
 for (var i = 0; i < key.length; i++) {
     $('.checkbox-group').append(
@@ -9,4 +9,4 @@ for (var i = 0; i < key.length; i++) {
     '</label>'
     )
 };
-//$(".jq-checked").prop("checked", true);
+$(".jq-checked").prop("checked", true);

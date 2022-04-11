@@ -1,4 +1,4 @@
-var dict = {
+export var dict = {
     '鍋in': 1,
     '三媽': 2,
     '小飯館兒': 1,
@@ -23,6 +23,9 @@ var dict = {
     '沙拉飯': 1,
     '關東煮炒泡麵': 2
 };
-var key = Object.keys(dict)
+export var key = Object.keys(dict);
 
-export { dict, key }
+export default {
+    dict: dict,
+    key: key
+};
