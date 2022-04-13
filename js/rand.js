@@ -6,6 +6,6 @@ rand = function() {
 
     var total_weight = weight_prefix_sum[weight_prefix_sum.length - 1];
 
-    var randomNumber = Math.ceil(Math.random() * total_weight) - 1;
-    document.getElementById("return").innerHTML = Object.keys(dict)[weight_prefix_sum.findIndex(index => index > randomNumber)];
+    var randomNumber = Math.random() * total_weight;
+    document.getElementById("return").innerHTML = Object.keys(dict)[weight_prefix_sum.findIndex(index => index >= randomNumber)];
 }
