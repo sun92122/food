@@ -1,0 +1,1 @@
+import{dict}from"../list.js";rand=function(){var e=[];Object.values(dict).reduce((t,n,d)=>e[d]=t+n,0);var t=e[e.length-1],n=Math.random()*t;document.getElementById("return").innerHTML=Object.keys(dict)[e.findIndex(e=>e>=n)]};

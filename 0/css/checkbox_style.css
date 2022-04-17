@@ -1,0 +1,71 @@
+.checkbox-group {
+    overflow: auto;
+    position: relative;
+    left: 0%;
+    align-items: center;
+    width: 100%;
+}
+
+.checkbox-group input {
+    opacity: 0;
+}
+
+.checkbox-group label {
+    position: relative;
+    left: 45%;
+    width: 30%;
+}
+
+.checkbox-group input:hover+label .icon-checkbox,
+.checkbox-group input.hover+label .icon-checkbox {
+    border-color: green;
+}
+
+.checkbox-group input:checked+label .icon-checkbox,
+.checkbox-group input.checked+label .icon-checkbox,
+.checkbox-group input[checked]+label .icon-checkbox {
+    border-color: green;
+    background-color: green;
+}
+
+.checkbox-group input:checked+label .icon-checkbox::before,
+.checkbox-group input.checked+label .icon-checkbox::before,
+.checkbox-group input[checked]+label .icon-checkbox::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+    margin-top: 4px;
+}
+
+.checkbox-group input.disable+label,
+.checkbox-group input[disabled]+label {
+    cursor: default;
+    color: lightgray;
+}
+
+.checkbox-group input.disable+label .icon-checkbox,
+.checkbox-group input[disabled]+label .icon-checkbox {
+    border-color: gray;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+}
+
+.checkbox-group label .icon-checkbox {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    justify-content: center;
+    align-items: flex-start;
+    border: 2px solid #58568a;
+    border-radius: 6px;
+}
